@@ -1,5 +1,5 @@
-cbioMetabric_NonTNBC_gene_exp=read.table("/Users/zhaoz/Dropbox/SurvivalAnalyses_Jupyter/cbioportal_metabric_NonTNBC_GeneExp_9genes.txt",sep=",",header = T,stringsAsFactors = F)
-cbioMetabric_TNBC_gene_exp=read.table("/Users/zhaoz/Dropbox/SurvivalAnalyses_Jupyter/cbioportal_metabric_TNBC_GeneExp_9genes.txt",sep=",",header = T,stringsAsFactors = F)
+cbioMetabric_NonTNBC_gene_exp=read.table("/path/cbioportal_metabric_NonTNBC_GeneExp_9genes.txt",sep=",",header = T,stringsAsFactors = F)
+cbioMetabric_TNBC_gene_exp=read.table("/path/cbioportal_metabric_TNBC_GeneExp_9genes.txt",sep=",",header = T,stringsAsFactors = F)
 library(tidyr)
 cbio_data_long2 <- gather(cbioMetabric_TNBC_gene_exp[,-1], GeneID, Gene_Expression, FANCL:GSK3B, factor_key=TRUE)
 cbio_data_long2$METABRIC<-"TNBC"
